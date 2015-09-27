@@ -1,7 +1,7 @@
 package com.kademika.Store;
 
 import com.kademika.Store.Market.Market;
-import com.kademika.Store.Market.MarketUI;
+import com.kademika.Store.Market.MarketGUI.MarketUI;
 
 public class MarketDemo {
 

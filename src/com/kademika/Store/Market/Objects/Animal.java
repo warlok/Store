@@ -2,15 +2,22 @@ package com.kademika.Store.Market.Objects;
 
 public class Animal implements Comparable<Animal>{
 
+    private static int current_id = 0;
+    private int id;
 	private String name;
 	private double price;
     private int amount;
 	private Type type; // Class: Aka Amphibian, Mammal
-	private String order; // Primates
 
 	public Animal() {
-		
+        current_id++;
+        this.id = current_id;
 	}
+
+    public Animal(int id) {
+        current_id++;
+        this.id = id;
+    }
 
     public int getAmount() {
         return amount;
@@ -28,8 +35,19 @@ public class Animal implements Comparable<Animal>{
 		this.name = name;
 	}
 
-	
-	public double getPrice() {
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public double getPrice() {
 		return price;
 	}
 
@@ -47,14 +65,6 @@ public class Animal implements Comparable<Animal>{
 		this.type = type;
 	}
 
-	public String getOrder() {
-		return order;
-	}
-
-	public void setOrder(String order) {
-		this.order = order;
-	}
-	
 	@Override
 	public int compareTo(Animal a) {
 		String alphabet="MBRFAmr";
